@@ -15,6 +15,34 @@ class App extends React.Component {
       name: nickName
     });
   }
+
+  componentWillMount() {
+    console.log("parent componentWillMount");
+  }
+  componentDidMount() {
+    console.log("parent componenDidMount");
+    // setTimeout(() => {
+    //   this.setState({
+    //     name: "Hello,react"
+    //   });
+    // }, 5000);
+  }
+  componentWillReceiveProps() {
+    console.log("parent WillReceiveProps");
+  }
+  shouldComponentUpdate() {
+    console.log("parent shouldComponentUpdate");
+    return true;
+  }
+  componentWillUpdate() {
+    console.log("parent componentWillUpdate");
+  }
+  componentDidUpdate() {
+    console.log("parent componentDidUpdate");
+  }
+  componentWillUnmount() {
+    console.log("parent componenWillUnmount");
+  }
   render() {
     console.log("parent component render");
     return (
