@@ -1,4 +1,5 @@
 import React from "react";
+// import "./styles.css";
 
 export default class extends React.Component {
   constructor(props) {
@@ -8,20 +9,29 @@ export default class extends React.Component {
     };
   }
   componentWillMount() {
-    console.log("componentWillMount");
+    console.log("child componentWillMount");
   }
   componentDidMount() {
-    console.log("componenDidMount");
-    setTimeout(() => {
-      this.setState({
-        name: "Hello,react"
-      });
-    }, 5000);
+    console.log("child componenDidMount");
+    // setTimeout(() => {
+    //   this.setState({
+    //     name: "Hello,react"
+    //   });
+    // }, 5000);
+  }
+
+  handleClick() {
+    const nickName = "Parry";
+    this.setState({
+      name: nickName
+    });
+    this.props.onChange(nickName);
   }
   render() {
+    console.log("child component render");
     return (
-      <div>
-        <h1>submenu</h1>
+      <div className="App">
+        <button onClick={this.handleClick.bind(this)}>click me</button>
         <h2>{this.state.name}</h2>
         <p>id: {this.props.id}</p>
         <p>name: {this.props.name}</p>
