@@ -2,7 +2,7 @@
   "name": "new",
   "version": "1.0.0",
   "description": "",
-  "keywords": [react,javascript],
+  "keywords": ["react","javascript"],
    "author": "tanghw",
   "license": "ISC",
   "main": "src/index.js",
