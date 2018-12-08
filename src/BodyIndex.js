@@ -19,6 +19,22 @@ export default class extends React.Component {
     //   });
     // }, 5000);
   }
+  componentWillReceiveProps() {
+    console.log("child WillReceiveProps");
+  }
+  shouldComponentUpdate() {
+    console.log("child shouldComponentUpdate");
+    return true;
+  }
+  componentWillUpdate() {
+    console.log("child componentWillUpdate");
+  }
+  componentDidUpdate() {
+    console.log("child componentDidUpdate");
+  }
+  componentWillUnmount() {
+    console.log("child componenWillUnmount");
+  }
 
   handleClick() {
     const nickName = "Parry";
