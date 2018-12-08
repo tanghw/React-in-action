@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 
 export default class extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="App">
         <h1>submenu</h1>
         <h2>{this.state.name}</h2>
         <p>id: {this.props.id}</p>
