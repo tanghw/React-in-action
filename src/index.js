@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BodyIndex from "./BodyIndex";
+import Child from "./child";
 import "./styles.css";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      name: "tanghw"
+      name: "parent self"
     };
   }
   handleChangeName(nickName) {
@@ -18,13 +18,15 @@ class App extends React.Component {
   render() {
     console.log("parent component render");
     return (
-      <div className="App">
-        <h1>parent component:</h1>
-        <p> {this.state.name}</p>
-        <BodyIndex
+      <div>
+        <div className="App">
+          <h1>Parent component:</h1>
+          <p>Name(state): {this.state.name}</p>
+        </div>
+        <Child
           id={1234567890}
-          name={"tanghw"}
-          onChange={val => this.handleChangeName(val)}
+          name={this.state.name}
+          changeName={val => this.handleChangeName(val)}
         />
       </div>
     );
